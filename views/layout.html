@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% block head%}
+<title>Portfolio</title>
+
+{% endblock %}
+
+<head>
+    <meta charset="UTF-8">
+    <!-- link do css -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="links">
+            <!-- a links -->
+            <a href="/">Sobre</a>
+            <a href="/portfolio">Aulas</a>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+
+</html>

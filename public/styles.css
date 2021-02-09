@@ -1,0 +1,191 @@
+/* importando a font */
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap";
+        /* zera as estilizações padroes do html */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+            
+}
+
+/* Variaveis */
+
+:root {
+    --color-green: #50f17b;
+    --color-rocket: #7159c1
+}
+
+body {
+    background-color: #282a36;
+    /* fonte do google fonts */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+
+}
+header {
+    padding: 32px;
+        background: rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    /* alinhamento de texto */
+    text-align: center;
+}
+
+.links a {
+    color: white;
+     /* tamanho da fonte */
+    font-size: 18px;
+    /* altura da do texto => colocar 10 a mais que no font size */
+    line-height: 28px;
+    /* espaçamento entre os links  */
+    margin: 0 16px;
+    /* retirar o underline */
+    text-decoration: none;
+}
+
+/* estilização no undderline */
+.links a:hover{
+    /* mudar pra cor abaixo */
+    color: var(--color-green);
+    /* mudança de cor e o tempo */
+    transition: color 200ms;
+}
+
+/* id pega com o # */
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    border-radius: 300% 300%;
+    border: 3px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p {
+    max-width: 300px;
+    margin: 32px auto;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+}
+
+#wrapper p a {
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green)
+}
+
+/* CARDS */
+.cards {
+    /* largura maxima */
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    /* 3 colunas  */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* espaçamento entre cada card  */
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-rocket);
+    border-radius: 25px 25px;
+}
+
+/* tamanho da imagem */
+.card_image-container img {
+    width: 100%;
+    border-radius: 25px 25px 0px 0px
+}
+
+.card_content, .card_info {
+    padding: 24px;
+}
+
+/* expaçamento 40 e fre */
+.card_info {
+    display: grid;
+    /* 2 colunas com mesmo tamanho */
+    grid-template-columns:  1fr 1fr;
+}
+
+.card_price {
+    background-color: var(--color-rocket);
+    /* trabalhar com brilho, constrates;
+    aqui vamos usar o brilho */
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* modal  */
+.modal-overlay{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+
+    /* fazer o modal desaparecer  */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    /* vh visao da aultura  */
+    margin: 5vh auto;
+    /* relative posição relativa  */
+    position: relative;
+}
+
+/* icone  */
+.modal .close-modal{
+    color: black;
+    /* absolute altura maxima  */
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    /* virar a maozinha  */
+    cursor: pointer;
+}
+
+/* modal ativo  */ 
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* video  */
+iframe {
+    width: 100%;
+    height: 90%;
+    /* nesse caso o absolute pega o tamanho total  */
+    position: absolute;
+    top: 5%;
+}
