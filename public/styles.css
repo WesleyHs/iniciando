@@ -81,7 +81,7 @@ header {
 }
 
 #wrapper p {
-    max-width: 300px;
+    max-width: 200px;
     margin: 32px auto;
     font-size: 24px;
     line-height: 34px;
@@ -100,7 +100,7 @@ header {
 /* CARDS */
 .cards {
     /* largura maxima */
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     display: grid;
     /* 3 colunas  */
@@ -121,7 +121,7 @@ header {
 }
 
 .card_content, .card_info {
-    padding: 24px;
+    padding: 20px;
 }
 
 /* expaçamento 40 e fre */
@@ -129,6 +129,7 @@ header {
     display: grid;
     /* 2 colunas com mesmo tamanho */
     grid-template-columns:  1fr 1fr;
+    align-items: center;
 }
 
 .card_price {
